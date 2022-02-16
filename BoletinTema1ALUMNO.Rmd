@@ -260,5 +260,9 @@ c.  Usa **summary** con cada uno de los modelos obtenidos y observa **Coefficien
 
 ```{r}
 
+summary(Modeloc39)
+summary(Modeloc52)
+lm(Modeloc39)
+lm(Modeloc52)
 
 ```
