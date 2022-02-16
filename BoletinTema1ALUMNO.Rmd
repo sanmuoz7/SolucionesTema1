@@ -171,7 +171,8 @@ libReturn
 #b
 head(libReturn$results)
 
-
+#c
+length(libReturn$results[,1])
 ```
 
 4.  En las transparencias del tema 1 se citan los primeros pasos a seguir cuando se analiza un nuevo conjunto de datos.
