@@ -186,6 +186,8 @@ length(libReturn$results[,1])
 #a
 head(cabbages)
 
+#b
+any(is.na(cabbages)) #No tiene ningún valor perdido
 
 
 
