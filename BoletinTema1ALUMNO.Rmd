@@ -246,8 +246,14 @@ plot(cabbages$VitC ~ cabbages$HeadWt) #No tienen relacion lineal
 b.  Repite el apartado anterior, pero obteniendo un modelo para cada una de las dos variedades de calabaza, **Cult**. Ver[Parámetros básicos plot](https://www.statmethods.net/advgraphs/parameters.html).
 
 ```{r}
+plot(cabbages$VitC ~ cabbages$HeadWt, pch = c(1, 18)[cabbages$Cult])
 
+Modeloc39 <- lm(cabbages$VitC ~ cabbages$HeadWt, data = cabbages, subset = which(Cult == "c39")) #Para la calabaza c39
 
+Modeloc52 <- lm(cabbages$VitC ~ cabbages$HeadWt, data = cabbages, subset = which(Cult == "c52")) #Para la calabaza c52
+
+abline(Modeloc39, lty = 3)
+abline(Modeloc52)
 ```
 
 c.  Usa **summary** con cada uno de los modelos obtenidos y observa **Coefficients**. Dado que hemos planteado un modelo $y=mx+n$, donde $y=VitC$ y $x=HeadWt$. La función **lm** nos permite obtener **(Intercept)**; **n** y la pendiente **HeadWt**; **m** (además de otros parámetros adicionales que evalúan la caracterísiticas del modelo). Observa que en todos los casos, la pendiene es negativa indicando que las calabazas de más peso contienen menos vitamina C. No te preocupes por el resto de parámetros del modelo, por el momento.
