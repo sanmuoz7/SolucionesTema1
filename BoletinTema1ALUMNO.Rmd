@@ -185,12 +185,20 @@ length(libReturn$results[,1])
 ```{r}
 #a
 head(cabbages)
+dim(cabbages)
+str(cabbages)
 
 #b
 any(is.na(cabbages)) #No tiene ningún valor perdido
+colSums(sapply(cabbages, is.na))
 
+#c
+head(Chile)
+dim(Chile)
+str(Chile)
 
-
+any(is.na(Chile))
+colSums(sapply(Chile, is.na))
 
 
 ```
